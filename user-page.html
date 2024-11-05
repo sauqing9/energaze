@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnerGaze - User Profile</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/images/logo_energaze.png">
+    <link rel="stylesheet" href="css/user.css">
+</head>
+<body style="background-color: #f4e4c4;">
+
+    <!-- test navbar -->
+    <div id="navbar-placeholder"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("navbar-placeholder").innerHTML = data;
+                })
+                .catch(error => console.error("Error loading navbar:", error));
+        });
+    </script>
+
+    <!-- User -->
+    <div class="container-xxl">
+        <div class="left-section">
+            <img src="assets/images/logo_energaze.png" alt="logo energaze" class="logo-left">
+            <div id="data-user">
+                <h3>NAME</h3>
+                <h4>Name</h4>
+                <h3>USERNAME</h3>
+                <h4>Username</h4>
+                <h3>EMAIL</h3>
+                <h4>Email</h4>
+                <h3>DATE OF BIRTH</h3>
+                <h4>Date Of Birth</h4>
+                <h3>PHONE NUMBER</h3>
+                <h4>Phone Number</h4>
+            </div>
+            <a href="#" class="btn btn-outline-light my-1 btn-logout rounded-pill">Log Out</a>
+        </div>
+        <div class="right-section">
+            <h2>Hello,</h2>
+            <h1>User (nama depan)</h1>
+            <p>Curious about GROVE?</p>
+            <a href="homepage.html#questions" class="btn btn-primary my-1 btn-ask-away rounded-pill">Ask away!</a>
+            <p2>Question and/or suggestions that you have already submitted will be listed below.</p2>
+            <div class="container questions-list" placeholder="Question and/or suggestions that you have already  submitted will be listed below." id="paragraph">
+                <!-- buat questions -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer d-flex align-items-end">
+        <div class="container footer-container d-flex">
+            <!-- Logo and Title -->
+            <div class="footer-logo">
+                <img src="assets/images/logo_energaze.png" alt="EnerGaze Logo" class="logo-img">
+                <h2 class="footer-title">EnerGaze</h2>
+            </div>
+            <!-- Copyright Text -->
+            <div class="footer-copyright">
+                <small>Copyright © 2024 Romusa. All rights reserved.</small>
+            </div>
+            
+        </div>
+    </footer>
+    
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  
+</body>
+</html>
